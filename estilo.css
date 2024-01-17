@@ -42,3 +42,27 @@ body{
 .play-board .head {
     background: green;
 }
+
+.game-over{
+    width: 300px;
+    height: 200px;
+    background-color: #90a7cc;
+    position: absolute;
+    border:9px solid #1c4c83;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.game-over p{
+    color: #aa2e2e;
+    font-size: 35px;
+    font-weight: 900;
+    margin: 15%;
+}
+.restart{
+    width: 80px;
+    height: 70px;
+    margin: -10% 35%;
+    border-radius: 50%;
+    border: 5px solid #276e12;
+    background: rgb(145, 206, 66);
+}

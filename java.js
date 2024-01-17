@@ -1,6 +1,8 @@
 const playBoard = document.querySelector(".play-board");
 const scoreElement  = document.querySelector(".score");
 const higtScoreElement  = document.querySelector(".high-score");
+const board = document.querySelector('.game-over');
+const restart = document.querySelector('.restart');
 
 let gamOver = false ;
 let foodx, foody;
@@ -20,9 +22,12 @@ const changFoodPosition = () => {
 
 const handleGameOver = () => {
     clearInterval(setIntervalId);
-    alert("Game Over!");
-    location.reload();
+    board.style.visibility= 'visible';
 }
+
+restart.addEventListener('click',function(){
+    location.reload();
+})
 
 const changeDirection = (e) => {
     console.log(e);
