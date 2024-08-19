@@ -1,16 +1,32 @@
+
+
 const playBoard = document.querySelector(".play-board");
 const scoreElement  = document.querySelector(".score");
 const higtScoreElement  = document.querySelector(".high-score");
 const board = document.querySelector('.game-over');
 const restart = document.querySelector('.restart');
-const body = document.getElementById('wrapper')
-alert('inicia')
+var myElement = document.getElementById('wrapper');
 
-// hammer (tactil)
-let tactil = new Hammer(body)
-tactil.on('panleft panright',(e)=>{
-    alert(e.type)
-})
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// listen to events...
+mc.on("panleft panright panup pandown ", function(ev) {
+    if(ev.type === "panup" && velocityy != 1){
+        velocityx = 0;
+        velocityy = -1;
+    }else if (ev.type === "pandown" && velocityy != -1){
+        velocityx = 0;
+        velocityy = 1;
+    }else if(ev.type === "panleft" && velocityx != 1){
+        velocityx = -1;
+        velocityy = 0;
+    }else if(ev.type === "panright" && velocityx != -1){
+        velocityx = 1;
+        velocityy = 0;
+    }    
+});
 
 let gamOver = false ;
 let foodx, foody;
