@@ -3,6 +3,14 @@ const scoreElement  = document.querySelector(".score");
 const higtScoreElement  = document.querySelector(".high-score");
 const board = document.querySelector('.game-over');
 const restart = document.querySelector('.restart');
+const body = document.querySelector('.wrapper')
+
+
+// hammer (tactil)
+let tactil = new Hammer(body)
+tactil.on('panleft panright',(e)=>{
+    alert(e.type)
+})
 
 let gamOver = false ;
 let foodx, foody;
