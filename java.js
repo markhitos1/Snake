@@ -5,7 +5,7 @@ const scoreElement  = document.querySelector(".score");
 const higtScoreElement  = document.querySelector(".high-score");
 const board = document.querySelector('.game-over');
 const restart = document.querySelector('.restart');
-var myElement = document.getElementById('wrapper');
+var myElement = document.querySelector('body');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
