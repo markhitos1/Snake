@@ -3,7 +3,7 @@ const scoreElement  = document.querySelector(".score");
 const higtScoreElement  = document.querySelector(".high-score");
 const board = document.querySelector('.game-over');
 const restart = document.querySelector('.restart');
-const body = document.querySelector('.wrapper')
+const body = document.getElementById('wrapper')
 alert('inicia')
 
 // hammer (tactil)
